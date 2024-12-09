@@ -5,12 +5,13 @@ import { UserDto } from './dto/user.dto';
 
 @Controller('users')
 export class UsersController {
-  constructor(private readonly usersService: UsersService) {}
+  constructor(private readonly usersService: UsersService) { }
 
   @Post()
   async create(@Body() createUserDto: CreateUserDto): Promise<UserDto> {
-    return this.usersService.create(createUserDto);     
-  }
+    return this.usersService.create(createUserDto);
+  } 
+
 
   @Get()
   findAll(): Promise<UserDto[]> {

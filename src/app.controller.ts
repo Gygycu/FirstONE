@@ -1,5 +1,6 @@
 import { Controller, Delete, Get } from '@nestjs/common';
 import { AppService } from './app.service';
+import { ValidationOptions, ValidationError } from 'class-validator';
 
 @Controller()
 export class AppController {
